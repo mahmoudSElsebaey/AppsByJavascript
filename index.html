@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainingJS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+
+</head>
+
+<body>
+    <!--------------------------------------------------- App1  -------------------------------------------------->
+    <hr style="margin-top: 10px;">
+    <h1 style="text-align: center;">App 1</h1>
+    <hr>
+    <h2 class="title-app" style="margin-top: 15px; margin-bottom: 0px;">Shopping</h2>
+    <section class="sec1">
+
+        <!-- product 1 -->
+        <div class="parent">
+            <div class="content-front">
+                <div class="content-front-img"> <img src="images/1.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">Bomber Zipped Jacket With Removable Hood - Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/1.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/1.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/1.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/1.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/1.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/1.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">Bomber Zipped Jacket - Black</p>
+                    </b>
+                    <p>Size : XL</p>
+                    <span>EGP : 1,200.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP : 1,350.00</span>
+                    </del>
+                    <span class="product-discount">-11.1%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" productName="Bomber Zipped Jacket" price="1200" class="btnAddToCart">Add To Cart
+                    <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+        <!-- product 2 -->
+        <div class="parent parent">
+            <div class="content-front content-front">
+                <div class="content-front-img"> <img src="images/2.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">Shield High-Neck Full Leather Shield Safety Boots-Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/2.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/2.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/2.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/2.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/2.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/2.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">Safety Ankle Boots - Black</p>
+                    </b>
+
+                    <p>Size : 42</p>
+                    <span>EGP 549.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP 600.00</span>
+                    </del>
+                    <span class="product-discount">-8.5%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" price="549" productName="Safety Ankle Boots" class="btnAddToCart">Add To Cart
+                    <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+        <!-- product 3 -->
+        <div class="parent parent">
+            <div class="content-front content-front">
+                <div class="content-front-img"> <img src="images/3.1.jpg" width="100%" alt=""></div>
+                <p class="product-title">American Eagle Training Jogger - Black</p>
+                <button id="goToBack" class="btn-front">show info</button>
+            </div>
+            <div class="content-back">
+                <div class="imgItems">
+                    <div class="groupImgShow">
+                        <img src="images/3.1.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/3.2.jpg" width="100%" id="imgShow" alt="">
+                        <img src="images/3.3.jpg" width="100%" id="imgShow" alt="">
+                    </div>
+                    <div class="groupImgIcon">
+                        <img src="images/3.1.jpg" id="imgBtn1" alt="">
+                        <img src="images/3.2.jpg" id="imgBtn2" alt="">
+                        <img src="images/3.3.jpg" id="imgBtn3" alt="">
+                    </div>
+                </div>
+                <div class="product-info">
+                    <b>
+                        <p style="text-align: center;">American Eagle Training Jogger - Black</p>
+                    </b>
+
+                    <p>Size : XS</p>
+                    <span>EGP 700.00</span>
+                    <del>
+                        <span style="color: gray; font-size: 14;">EGP 1,000.00</span>
+                    </del>
+                    <span class="product-discount">-30%</span>
+                    <h6 style="color: #4f651f;">Free delivery (you are saving EGP 10.83) to 6th of October</h6>
+                    <pre class="icons">
+                        <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="color:gray ;"></i></span>
+                        <span class="heart-icon" id="heartBtn"><i class="fas fa-heart"></i></span>
+                    </pre>
+                </div>
+                <button id="addToCart" price="700" class="btnAddToCart" productName="American Eagle Training Jogger">Add
+                    To Cart <span id="cartIcon"><i class="fas fa-cart-plus"></i></span> </button>
+                <button id="goToFront" class="btnBack">No Thanks</button>
+            </div>
+        </div>
+    </section>
+    <div class="showProuductsPrice">
+        <p class="products-choosed"></p>
+        <button class="addToCartBtn" style="display: none;">Show Price</button>
+        <p class="numbersOfProducts"></p>
+        <p class="totalPrice"></p>
+    </div>
+    <!--------------------------------------------------- App2  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 2</h1>
+    <hr>
+    <section class="sec-2">
+        <div class="app2-content">
+            <!-- <p style="text-align: center;">Try to change the number</p><br> -->
+            <button class="btnToDecreaseTen">-10</button>
+            <button class="btnToDecrease">-</button>
+            <input class="numInp" type="number" min="0" max="100" value="0">
+            <button class="btnToIncrease">+</button>
+            <button class="btnToIncreaseTen">+10</button>
+            <button class="btnToReset">Reset</button>
+
+            <span style="font-size: 13px; color: rgb(11, 36, 119); margin-left: 150px;">
+                Numbers from 0:100 are <mark>green</mark> color ,Other are <mark>red</mark> color
+            </span>
+
+            <br><br><br><br>
+            <hr>
+            <hr><br><br><br>
+
+            <!-- <span>Arabic:</span><br> -->
+            <button class="btnToDecreaseByArrow"><i class="fas fa-angle-left"></i></button>
+            <span style="line-height: 20px;">0%</span>
+            <input class="inpRange" type="range" min="0" max="100" value="50" disabled>
+            <span>100%</span>
+            <button class="btnToIncreaseByArrow"><i class="fas fa-angle-right"></i></button>
+            <span class="percentOfRange"></span><br><br>
+            <button class="btnToResetRange">Reset</button>
+            <span style="font-size: 13px; color: rgb(11, 36, 119); margin-left: 350px;">
+                Numbers from 0:40 are <mark>red</mark> , Numbers from 40:60 are <mark>black</mark> and Numbers from
+                60:100 are <mark>green</mark> color
+            </span>
+            <br><br>
+        </div>
+    </section>
+    <!--------------------------------------------------- App3 -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 3</h1>
+    <hr>
+    <section class="sec-3">
+        <h2 class="title-app">Add friends</h2>
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+        <div class="sec3_content">
+            <img class="imgFriend" src="images/77oda.jpeg" width="100%" height="100%" alt="">
+            <span class="friendName">Mahmoud Elsebaey</span>
+            <span class="addUserIcon"><i class="fas fa-user-plus"></i></span>
+            <button class="cancelAddUser">Cancel</button>
+        </div>
+    </section>
+    <!--------------------------------------------------- App4  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 4</h1>
+    <hr>
+    <section class="sec-4">
+        <h2 class="title-app">Change menu icon when closing</h2>
+        <div class="sec4-content">
+            <div class="menuBtn">
+                <span id="sp1"></span>
+                <span id="sp2"></span>
+                <span id="sp3"></span>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App5  -------------------------------------------------->
+    <!-- OZ -->
+    <hr>
+    <h1 style="text-align: center;">App 5</h1>
+    <hr>
+    <section class="sec-5">
+        <h2 class="title-app">write messsage with limited letters</h2>
+        <div class="sec5-content">
+            <textarea id="textareaContent" cols="40" rows="5" placeholder="Enter your messsage"></textarea>
+            <span id="countCharaters">100</span>
+
+        </div>
+    </section>
+
+    <!--------------------------------------------------- App6  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 6</h1>
+    <hr>
+    <section class="sec-6">
+        <h2 class="title-app">show / hide password</h2>
+        <div class="sec6-content">
+            <label>Enter your pass </label>
+            <input type="password" class="passInp" id="passInp">
+            <button id="passBtn">show password</button>
+            <br><br><br>
+            <label>Enter your pass </label>
+            <input type="password" class="passInp" id="passInp2">
+            <button class="iconPassBtn"><i class="fas fa-eye-slash"></i></button>
+        </div>
+    </section>
+    <!--------------------------------------------------- App7  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 7</h1>
+    <hr>
+    <section class="sec-7">
+        <h2 class="title-app">Rating By Stars</h2>
+        <div class="sec7-content" id="starsIcons">
+
+            <i class="fas fa-star s1"></i>
+            <i class="fas fa-star s2"></i>
+            <i class="fas fa-star s3"></i>
+            <i class="fas fa-star s4"></i>
+            <i class="fas fa-star s5"></i>
+        </div>
+    </section>
+
+    <!--------------------------------------------------- App8  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 8</h1>
+    <hr>
+    <section class="sec-8">
+        <h2 class="title-app">images show</h2>
+        <div class="sec8-content">
+            <div class="images-content" id="imgIcons">
+                <img src="images/n1.jpg">
+                <img src="images/n2.jpg">
+                <img src="images/n3.jpg">
+                <img src="images/n4.jpg">
+                <img src="images/n5.jpg">
+            </div>
+            <div class="images-show" id="imgShow">
+                <img src="images/n1.jpg">
+                <img src="images/n2.jpg">
+                <img src="images/n3.jpg">
+                <img src="images/n4.jpg">
+                <img src="images/n5.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------------------- App9  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 9</h1>
+    <hr>
+    <section class="sec-9">
+        <div class="sec9-content">
+            <h2 class="title-app" style="text-align: center; color: rgb(100, 54, 4);">Time & Date</h2>
+            <div class="clock-model">
+                <i class="fas fa-clock" style="font-size: 50px;"></i>
+                <h1 class="timeNow"></h1>
+                <i class="fas fa-calendar-alt" style="font-size: 50px; margin-left: 100px;"></i>
+                <h1 class="dateNow"></h1>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App10  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 10</h1>
+    <hr>
+    <section class="sec-10">
+        <div class="sec10-content">
+            <h2 class="title-app">buttons with sound</h2>
+            <div class="btnsWithSound">
+                <div class="btnS"> <button id="btnSound_1">Click</button></div>
+                <div class="btnS"> <button id="btnSound_2">Double Click</button></div>
+                <div class="btnS"> <button id="btnAlert">Alert</button></div>
+                <div class="btnS"> <button id="btnClose">Close</button></div>
+                <div class="btnS"> <button id="btnError">Error</button></div>
+                <!-- <div class="btnS"> <button id="btnAlarm">Alarm</button></div> -->
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App11  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 11</h1>
+    <hr>
+    <section class="sec-11">
+        <h2 class="title-app">Images slider</h2>
+        <div class="sec11-content">
+            <div class="mySlides"><img src="images/n1.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n2.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n3.jpg" width="100%" height="100%"></div>
+            <div class="mySlides"><img src="images/n4.jpg" width="100%" height="100%"></div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="imgDots--">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+
+    <!--------------------------------------------------- App12  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 12</h1>
+    <hr>
+    <section class="sec-12">
+        <h2 class="title-app">Images show By Buttons</h2>
+        <div class="sec12-content">
+            <nav>
+                <ul id="imgItems">
+                    <li class="person-item">Persons</li>
+                    <li class="car-item">Cars</li>
+                    <li class="nature-item">Natures</li>
+                    <li class="phones-item">phones</li>
+                </ul>
+                <div class="persons" id="imgContainer">
+                    <div class="" id="imgContent">
+                        <div class="imgs-box"><img src="images/person-1.jpg" alt=""></div>
+                        <div class="imgs-box"><img src="images/person-2.jpg" alt=""></div>
+                        <div class="imgs-box"><img src="images/person-3.jpg" alt=""></div>
+                    </div>
+                    <button class="BtnCloseImgs">x</button>
+                </div>
+                <div class="cars" id="imgContainer">
+                    <div class="cars-imgs" id="imgContent">
+                        <div class="imgs-box"><img src="images/car-1.jpg"></div>
+                        <div class="imgs-box"><img src="images/car-2.jpg"></div>
+                        <div class="imgs-box"><img src="images/car-3.jpg"></div>
+                    </div>
+                    <button class="BtnCloseImgs">x</button>
+                </div>
+                <div class="natures" id="imgContainer">
+                    <div class="natures-imgs" id="imgContent">
+                        <div class="imgs-box"><img src="images/n4.jpg"></div>
+                        <div class="imgs-box"><img src="images/n7.jpg"></div>
+                        <div class="imgs-box"><img src="images/n8.jpg"></div>
+                    </div>
+                    <button class="BtnCloseImgs">x</button>
+                </div>
+                <div class="phones" id="imgContainer">
+                    <div class="phones-imgs" id="imgContent">
+                        <div class="imgs-box"><img src="images/phone-1.jpg" width="100%"></div>
+                        <div class="imgs-box"><img src="images/phone-2.jpg" width="100%"></div>
+                        <div class="imgs-box"><img src="images/phone-1.jpg" width="100%"></div>
+                    </div>
+                    <button class="BtnCloseImgs">x</button>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!--------------------------------------------------- App13  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 13</h1>
+    <hr>
+    <section class="sec-13">
+        <h2 class="title-app">Questions & Solutions</h2>
+        <div class="sec13-content">
+            <!-- Q1 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p>Q<sub>1</sub>) CSS stands for</p>
+                        <ol>
+                            <li>Cascade style sheets</li>
+                            <li>Color and style sheets</li>
+                            <li>Cascading style sheets</li>
+                            <li>None of the above</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p>Q<sub>1</sub>) CSS stands for</p>
+                        <ol>
+                            <li>Cascade style sheets</li>
+                            <li>Color and style sheets</li>
+                            <li class="correct-solution">Cascading style sheets</li>
+                            <li>None of the above</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Q2 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p>Q<sub>2</sub>) it is a way for writing css</p>
+                        <ol>
+                            <li>internal stylesheet</li>
+                            <li>inline stylesheet</li>
+                            <li>external stylesheet</li>
+                            <li>all of mentioned</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p>Q<sub>2</sub>) it is a way for writing css</p>
+                        <ol>
+                            <li>internal stylesheet</li>
+                            <li>inline stylesheet</li>
+                            <li>external stylesheet</li>
+                            <li class="correct-solution">all of mentioned</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Q3 -->
+            <div class="parent-box">
+                <div class="box-inner">
+                    <div class="box-front">
+                        <p style="font-size: 17px;">Q<sub>3</sub>) The default animation-play-state</p>
+                        <ol>
+                            <li>running</li>
+                            <li>linear</li>
+                            <li>paused</li>
+                            <li>normal</li>
+                        </ol>
+                        <button id="showSolutionBtn">Show solution</button>
+                    </div>
+                    <div class="box-back">
+                        <p style="font-size: 17px;">Q<sub>3</sub>) The default animation-play-state</p>
+                        <ol>
+                            <li class="correct-solution">running</li>
+                            <li>linear</li>
+                            <li>paused</li>
+                            <li>normal</li>
+                        </ol>
+                        <button id="doneSolutionBtn">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App14  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 14</h1>
+    <hr>
+    <section class="sec-14">
+        <h2 class="title-app">Show Map</h2>
+        <div class="sec14-content">
+            <iframe id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110519.24138950053!2d31.32543427474067!3d30.04470930545608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1658073156643!5m2!1sar!2seg"
+                style="border:1;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-btns">
+                <button id="normalMap">normal map</button>
+                <button id="darkMap">dark map</button>
+                <button id="grayMap">gray map</button>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App15  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 15</h1>
+    <hr>
+    <section class="sec-15">
+        <h2 class="title-app">Try select any text and print it
+        </h2>
+        <div class="sec15-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus a nihil, voluptates assumenda sed
+                maxime aliquid placeat earum ab explicabo fuga doloremque eius velit temporibus voluptate. Perspiciatis
+                molestiae sapiente porro.</p>
+
+            <button id="showSelectedText">Show Selected Text</button>
+            <textarea id="textSelected" rows="8" disabled
+                placeholder="select text and press the button to print this text"></textarea>
+
+        </div>
+    </section>
+    <!--------------------------------------------------- App16  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 16</h1>
+    <hr>
+    <section class="sec-16">
+        <h2 class="title-app">Slide Up & Down </h2>
+        <div class="sec16-content">
+            <div class="parent-slider">
+                <div class="main-slide">
+                    <div class="slide-content">
+                        <div class="img-title">
+                            <img src="images/77oda.jpeg">
+                            <div class="img-name">
+                                <h3>Mahmoud Elsebaey</h3>
+                                <p>Student</p>
+                            </div>
+                        </div>
+                        <div class="img-info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ad blanditiis recusandae,
+                            molestiae quas reiciendis libero porro numquam? Enim explicabo ratione atque porro a nam
+                            repudiandae voluptatum adipisci facere quaerat.
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <div class="img-title">
+                            <img src="images/person-1.jpg">
+                            <div class="img-name">
+                                <h3>Mahmoud Elsebaey</h3>
+                                <p>Frontend</p>
+                            </div>
+                        </div>
+                        <div class="img-info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ad blanditiis recusandae,
+                            molestiae quas reiciendis libero porro numquam? Enim explicabo ratione atque porro a nam
+                            repudiandae voluptatum adipisci facere quaerat.
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <div class="img-title">
+                            <img src="images/person-2.jpg">
+                            <div class="img-name">
+                                <h3>Mahmoud Elsebaey</h3>
+                                <p>Web Developer</p>
+                            </div>
+                        </div>
+                        <div class="img-info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ad blanditiis recusandae,
+                            molestiae quas reiciendis libero porro numquam? Enim explicabo ratione atque porro a nam
+                            repudiandae voluptatum adipisci facere quaerat.
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <div class="img-title">
+                            <img src="images/person-3.jpg">
+                            <div class="img-name">
+                                <h3>Mahmoud Elsebaey</h3>
+                                <p>Doctor</p>
+                            </div>
+                        </div>
+                        <div class="img-info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ad blanditiis recusandae,
+                            molestiae quas reiciendis libero porro numquam? Enim explicabo ratione atque porro a nam
+                            repudiandae voluptatum adipisci facere quaerat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons-slider">
+                    <p id="upArrow"><i class="fas fa-arrow-alt-circle-up"></i></p>
+                    <p id="downArrow"><i class="fas fa-arrow-alt-circle-down"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App17  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 17</h1>
+    <hr>
+    <section class="sec-17">
+        <h2 class="title-app">Calculator </h2>
+        <div class="sec17-content">
+            <div class="calculator-box">
+                <table class="calc-table">
+                    <tr>
+                        <th class="result-calc" colspan="4">
+                            <span class="showNum1"></span>
+                            <span class="showOprator"></span>
+                            <span class="showNum2"></span>
+                            مش شغاله لاسباب فنية
+                        </th>
+                    </tr>
+                    <tr>
+                        <td id="calcNum">7</td>
+                        <td id="calcNum">8</td>
+                        <td id="calcNum">9</td>
+                        <td id="calcDiv" style="background-color: rgb(48, 47, 47);">/</td>
+                    </tr>
+                    <tr>
+                        <td id="calcNum">4</td>
+                        <td id="calcNum">5</td>
+                        <td id="calcNum">6</td>
+                        <td id="calcMul" style="background-color: rgb(48, 47, 47);">*</td>
+                    </tr>
+                    <tr>
+                        <td id="calcNum">1</td>
+                        <td id="calcNum">2</td>
+                        <td id="calcNum">3</td>
+                        <td id="calcSub" style="background-color: rgb(48, 47, 47);">-</td>
+                    </tr>
+                    <tr>
+                        <td id="calcNum">0</td>
+                        <td id="calcNum" colspan="2" style="font-size: 20px; font-weight: 900;"><sup>.</sup></td>
+                        <td id="calcSum" rowspan="2" style="background-color: rgb(48, 47, 47);">+</td>
+                    </tr>
+                    <tr>
+                        <td id="calcDel" colspan="2" style="background-color: red; color:#fff;">del</td>
+                        <td id="calcEqual" style="background-color: green; color:#fff;">=</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App18  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 18</h1>
+    <hr>
+    <section class="sec-18">
+        <h2 class="title-app">light on & off</h2>
+        <div class="sec18-content">
+            <button id="btnON">ON</button>
+            <img id="lightImg" src="images/lightoff.png">
+            <button id="btnOFF">OFF</button>
+        </div>
+    </section>
+    <!--------------------------------------------------- App19  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 19</h1>
+    <hr>
+    <section class="sec-19">
+        <h2 class="title-app">Products Slide</h2>
+        <div class="sec19-content">
+            <div class="shopping-count-products">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="productsCounter">0</span>
+            </div>
+
+            <div class="products-slider-container" id="productContainer">
+                <!-- product-parent 1-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/1.1.jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 300$</p>
+                        <p class="product-size"><b>Size : </b> XL</p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 2-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/2.1.jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 300$</p>
+                        <p class="product-size"><b>Size : </b> XL</p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 3-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/3.1.jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 300$</p>
+                        <p class="product-size"><b>Size : </b> XL</p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 4-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/phone-1.jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 8000$</p>
+                        <p class="product-type"><b>Type : </b> OPPO</p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 5-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/phone-3.jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 8000$</p>
+                        <p class="product-type"><b>Type : </b> OPPO</p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 6-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/product (1).jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 100$</p>
+                        <p class="product-date"><b>Production Date : </b>2022 / 5 / 23 </p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 7-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/product (2).jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 100$</p>
+                        <p class="product-date"><b>Production Date : </b>2022 / 5 / 23 </p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+                <!-- product-parent 8-->
+                <div class="product-box">
+                    <div class="product-img"><img src="images/product (7).jpg"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">product name</h3>
+                        <p class="product-price"><b>Price : </b> 100$</p>
+                        <p class="product-date"><b>Production Date : </b>2022 / 5 / 23 </p>
+                    </div>
+                    <button class="buy-product-btn">Add To Cart</button>
+                    <span class="del-product"><i class="fas fa-trash"></i></span>
+                </div>
+            </div>
+            <!-- controls next and pervious button -->
+            <div class="buttons-controls">
+                <button id="bntPrev"><i class="fas fa-chevron-left"></i></button>
+                <button id="bntNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App20  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 20</h1>
+    <hr>
+    <section class="sec-20">
+        <h2 class="title-app">Shopping with choose the Quantity of products</h2>
+        <div class="sec20-content">
+            <div class="products-title">
+                <p>Product</p>
+                <p>price</p>
+                <p>Quantity</p>
+                <p>Total</p>
+            </div>
+            <div class="box-products">
+                <!-- product-1 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (1).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="100">100$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-2 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (2).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="50">50$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-3 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (3).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="30">30$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-4 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (4).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="70">70$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-5 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (5).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="120">120$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-6 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (6).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="65">65$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-7 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (7).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="46">46$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+                <!-- product-8 -->
+                <div class="cart-product">
+                    <div class="product-image"><img src="images/product (8).jpg" width="100%">
+                        <p>product name</p>
+                    </div>
+                    <div class="p-price" price="175">175$</div>
+                    <div class="product-quantity">
+                        <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
+                            value="0"><button class="increase-quantity">+</button>
+                    </div>
+                    <div class="product-total-price">0 $</div>
+                </div>
+                <hr style="color: #a9a5a5ac;">
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------- App21  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 21</h1>
+    <hr>
+    <section class="sec-21">
+        <h2 class="title-app">SOON</h2>
+        <div class="sec21-content"></div>
+    </section>
+    <!--------------------------------------------------- App22  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 22</h1>
+    <hr>
+    <section class="sec-22">
+        <h2 class="title-app">SOON</h2>
+        <div class="sec22-content"></div>
+    </section>
+    <!--------------------------------------------------- App23  -------------------------------------------------->
+    <hr>
+    <h1 style="text-align: center;">App 23</h1>
+    <hr>
+    <section class="sec-23">
+        <h2 class="title-app">SOON</h2>
+        <div class="sec23-content"></div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <!-- <script src="js/script2.js"></script> -->
+</body>
+
+</html>
