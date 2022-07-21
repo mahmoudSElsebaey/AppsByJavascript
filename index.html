@@ -513,9 +513,12 @@
         <h2 class="title-app">Try select any text and print it
         </h2>
         <div class="sec15-content">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus a nihil, voluptates assumenda sed
+            <p style="line-height: 2;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus a nihil,
+                voluptates assumenda sed
                 maxime aliquid placeat earum ab explicabo fuga doloremque eius velit temporibus voluptate. Perspiciatis
-                molestiae sapiente porro.</p>
+                molestiae sapiente porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi sed
+                quidem voluptatem in commodi illo quam minus placeat odit assumenda minima, eius vel deleniti, maiores
+                eos sint possimus consectetur?</p>
 
             <button id="showSelectedText">Show Selected Text</button>
             <textarea id="textSelected" rows="8" disabled
@@ -776,8 +779,8 @@
             <div class="products-title">
                 <p>Product</p>
                 <p>price</p>
-                <p>Quantity</p>
-                <p>Total</p>
+                <p style="width: 25%;">Quantity</p>
+                <p class="total-product-price">Total</p>
             </div>
             <div class="box-products">
                 <!-- product-1 -->
@@ -790,9 +793,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-2 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (2).jpg" width="100%">
@@ -803,9 +808,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-3 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (3).jpg" width="100%">
@@ -816,9 +823,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-4 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (4).jpg" width="100%">
@@ -829,9 +838,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-5 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (5).jpg" width="100%">
@@ -842,9 +853,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-6 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (6).jpg" width="100%">
@@ -855,9 +868,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-7 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (7).jpg" width="100%">
@@ -868,9 +883,11 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
                 <!-- product-8 -->
                 <div class="cart-product">
                     <div class="product-image"><img src="images/product (8).jpg" width="100%">
@@ -881,9 +898,16 @@
                         <button class="decrease-quantity">-</button><input type="number" id="inpQuantity" disabled
                             value="0"><button class="increase-quantity">+</button>
                     </div>
-                    <div class="product-total-price">0 $</div>
+                    <div class="total-price">
+                        <div class="product-total-price">0 $</div>
+                        <button class="product-buy-btn">Buy</button>
+                    </div>
                 </div>
-                <hr style="color: #a9a5a5ac;">
+            </div>
+            <!-- El fatora -->
+            <div class="box-fatora">
+                <button id="AddToCartAllProduct">Add to cart</button>
+                <h2 id="showTotalPrice"></h2>
             </div>
         </div>
     </section>

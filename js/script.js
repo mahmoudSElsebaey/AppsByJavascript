@@ -675,9 +675,6 @@ let productContainer = document.querySelector("#productContainer")
     , bntPrev = document.querySelector("#bntPrev")
     , bntNext = document.querySelector("#bntNext")
     , marginLeftValue = 0
-// productContainer.style.width
-console.log(productContainer)
-
 function slideProductNext() {
     if (marginLeftValue > -1220) {
         marginLeftValue -= 305
@@ -690,7 +687,6 @@ function slideProductNext() {
         }
     }
 }
-
 function slideProductPrevious() {
     if (marginLeftValue < 0) {
         marginLeftValue += 305
@@ -710,7 +706,6 @@ bntPrev.onclick = slideProductPrevious
 if (slideProductPrevious() == 0) {
     bntPrev.style.visibility = "hidden"
 }
-
 // buy the product add to cart
 let buyProductBtn = document.querySelectorAll(".buy-product-btn")
     , productBox = document.querySelectorAll("#productContainer .product-box")
@@ -747,18 +742,36 @@ let decreaseQuantityBtn = document.querySelectorAll(".decrease-quantity")
     , inpQuantity = document.querySelectorAll("#inpQuantity")
     , productTotalPrice = document.querySelectorAll(".product-total-price")
     , productPrice = document.querySelectorAll(".p-price")
+    , productBuyBtn = document.querySelectorAll(".product-buy-btn")
     , totalPriceQuntity = [0, 0, 0, 0, 0, 0, 0, 0]
 
 // console.log(totalPriceQuntity[3])
 
 // increase the quantity of products and get the total of price after increasing
 increaseQuantityBtn.forEach(function (inpIncrease, i) {
-    inpIncrease.addEventListener("click", () => {
+    function increaseQuantity() {
         inpQuantity[i].value++;
+        productBuyBtn[i].style = null
+        productBuyBtn[i].innerHTML = "Buy"
         totalPriceQuntity[i] += parseInt(productPrice[i].getAttribute("price"))
         productTotalPrice[i].innerHTML = totalPriceQuntity[i] + " $"
-    })
+          // Display Buy btn 
+        if (inpQuantity[i].value != 0) {
+            productBuyBtn[i].style.display = "block"
+            productTotalPrice[i].style.paddingRight = "80px"
+        }
+      // change the buy btn after click event
+        productBuyBtn[i].addEventListener("click", () => {
+            productBuyBtn[i].innerHTML = '<i class="fas fa-check"></i>'
+            productBuyBtn[i].style.color = "#fff"
+            productBuyBtn[i].style.backgroundColor = "green"
+            productBuyBtn[i].style.border = "none"
+            productBuyBtn[i].style.animation = "zoomBtn .4s 1"
+        })
+    }
+    inpIncrease.addEventListener("click", increaseQuantity)
 })
+
 // decrease the quantity of products and get the total of price after decreasing
 decreaseQuantityBtn.forEach(function (inpDecrease, i) {
     inpDecrease.addEventListener("click", () => {
@@ -766,8 +779,17 @@ decreaseQuantityBtn.forEach(function (inpDecrease, i) {
             inpQuantity[i].value = 0
         } else {
             inpQuantity[i].value--;
+            productBuyBtn[i].style = null
+            productBuyBtn[i].style.display = "block"
+            productBuyBtn[i].innerHTML = "Buy"
             totalPriceQuntity[i] -= parseInt(productPrice[i].getAttribute("price"))
             productTotalPrice[i].innerHTML = totalPriceQuntity[i] + " $"
+        }
+        // Hidden Buy btn
+        if (inpQuantity[i].value == 0) {
+            productBuyBtn[i].style = null
+            productBuyBtn[i].innerHTML = "Buy"
+            productTotalPrice[i].style = null
         }
     })
 })
