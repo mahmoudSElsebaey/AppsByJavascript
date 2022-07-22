@@ -244,7 +244,8 @@ addUserIcon.forEach(function (addUser, i) {
 ////***************************************************** App4 **************************************************/
 var menuBtn = document.querySelector(".menuBtn")
     , menuBtnAll = document.querySelectorAll(".menuBtn span")
-function afterClickMenuBtn() {
+    , checkMenuBtn = 0
+function changeMenuIcon() {
     menuBtnAll[0].style.transform = "rotate(40deg)";
     menuBtnAll[0].style.marginTop = "45px";
     menuBtnAll[0].style.height = "10px";
@@ -260,7 +261,14 @@ function afterClickMenuBtn() {
     menuBtn.style.backgroundColor = "red"
     menuBtn.style.borderColor = "red"
 }
-menuBtn.onclick = afterClickMenuBtn
+function returnMenuIcon() {
+    for (let index = 0; index < menuBtnAll.length; index++) { menuBtnAll[index].style = null }
+    menuBtn.style = null
+}
+menuBtn.addEventListener("click", () => {
+    if (menuBtn.style.backgroundColor == "red"){ returnMenuIcon() } //return icon
+    else { changeMenuIcon() }//change icon 
+})
 
 ////***************************************************** App5 **********************************************/
 var textareaContent = document.querySelector("#textareaContent")
@@ -479,10 +487,10 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+        dots[i].className = dots[i].className.replace(" activeDot", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    dots[slideIndex - 1].className += " activeDot";
 }
 ///******************************************************************** app12  ****************************/
 let imgItemsBtn = document.querySelectorAll("#imgItems li")
@@ -816,3 +824,38 @@ for (let i = 0; i < closeItemBtn.length; i++) {
         }, 400);
     })
 }
+/******************************************************************** app22  ****************************/
+let imagesShow = document.querySelectorAll(".slideshow-box")
+    , nextSlideBtn = document.querySelector(".slideshow-next")
+    , prevSlideBtn = document.querySelector(".slideshow-previous")
+    , dotsBtn = document.querySelectorAll(".nav .dot")
+    , slideNum = 0;
+
+function slideShow(n) {
+    if (slideNum > imagesShow.length - 1) {
+        slideNum = 0
+    }
+    if (slideNum < 0) {
+        slideNum = imagesShow.length - 1
+    }
+    let i;
+    for (i = 0; i < imagesShow.length; i++) {
+        imagesShow[i].style.display = "none";
+    }
+    imagesShow[slideNum].style.display = "block";
+
+    for (i = 0; i < dotsBtn.length; i++) {
+        dotsBtn[i].className = dotsBtn[i].className.replace(" active", "");
+    }
+    dotsBtn[slideNum].className += " active";
+}
+slideShow(slideNum)
+// moving by using next , previous buttons
+nextSlideBtn.addEventListener("click", () => { slideShow(slideNum++) })
+prevSlideBtn.addEventListener("click", () => { slideShow(slideNum--) })
+// moving by using dots buttons
+dotsBtn.forEach(function (dotItem, i) {
+    dotItem.addEventListener("click", () => {
+        slideShow(slideNum = i)
+    })
+})
