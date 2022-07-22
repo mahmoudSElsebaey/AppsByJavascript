@@ -90,7 +90,7 @@ addToCart.forEach(function (addCartBtn, i) {
 })
 
 addToCartBtn.onclick = function () {
-    numOfProduct.textContent = "Number of products that you choosed is " + (numProduct - 1) + " products"
+    numOfProduct.textContent = "Number of products that you choosed are " + (numProduct - 1) + " products"
     totalPriceContent.textContent = " Total Price is " + totalPrice + " EGP"
 }
 
@@ -599,58 +599,41 @@ if (sliderDown() == 0) {
     downArrowBtn.style.visibility = "hidden"
 }
 ///******************************************************************** app17  ****************************/
-let resultCalc = document.querySelector(".result-calc")
-    , anyCalcBtn = document.querySelectorAll(".calc-table tr")
-// , calcNumBtn = document.querySelectorAll("#calcNum")
-// , calcEqualBtn = document.querySelector("#calcEqual")
-// , calcDivBtn = document.querySelector("#calcDiv")
-// , calcMulBtn = document.querySelector("#calcMul")
-// , calcSubBtn = document.querySelector("#calcSub")
-// , calcSumBtn = document.querySelector("#calcSum")
-// , calcDel = document.querySelector("#calcDel")
-// , showNum1 = document.querySelector(".showNum1")
-// , showNum2 = document.querySelector(".showNum2")
-// , showOprator = document.querySelector(".showOprator")
+let displayOpreation = document.querySelector(".display-opreation")
+    , showResultCalc = document.querySelector(".show-result-calc")
+    , calcNumBtn = document.querySelectorAll("#calcNum")
+    , calcEqualBtn = document.querySelector("#calcEqual")
+    , calcDel = document.querySelector("#calcDel")
+    , calcClear = document.querySelector("#calcClear")
 
 
-// delete 
-// calcDel.onclick = () => {
-//     resultCalc.innerHTML = null
-// }
+calcNumBtn.forEach(function (numBtn) {
+    numBtn.addEventListener("click", () => {
+        displayOpreation.textContent += numBtn.textContent
+        var resultc = eval(displayOpreation.textContent)
 
-anyCalcBtn.forEach(function (a) {
-    a.onclick = () => {
-        resultCalc.innerHTML = "بقوووووولك مش شغاله"
-        resultCalc.style.color = "darkgreen"
-    }
+        if (displayOpreation.textContent == "") {
+            showResultCalc.style = null
+            showResultCalc.innerHTML = ""
+        }
+        // Equal btn => display the result
+        calcEqualBtn.addEventListener("click", () => {
+            if (displayOpreation.textContent !== "") {
+                showResultCalc.textContent = resultc
+                showResultCalc.style.color = "green"
+            }
+        });
+        // clear btn
+        calcClear.addEventListener("click", () => {
+            displayOpreation.textContent = ""
+            showResultCalc.innerHTML = ""
+        })
+    })
+});
+// delete btn 
+calcDel.addEventListener("click", () => {
+    displayOpreation.textContent = displayOpreation.textContent.slice(0, -1)
 })
-
-// calcNumBtn.forEach(function (numBtn) {
-//     function nn1() {
-//         resultCalc.innerHTML += numBtn.textContent
-//         let n1 = resultCalc.innerHTML
-//         return n1
-//     }
-//     numBtn.onclick = nn1
-//     calcDivBtn.onclick = () => {
-//         resultCalc.innerHTML = calcDivBtn.textContent;
-//         op = 0
-//         numBtn.onclick = nn2
-//     }
-//     calcMulBtn.onclick = () => { resultCalc.innerHTML = calcMulBtn.textContent; op = 1 }
-//     calcSubBtn.onclick = () => { resultCalc.innerHTML = calcSubBtn.textContent; op = 2 }
-//     calcSumBtn.onclick = () => { resultCalc.innerHTML = calcSumBtn.textContent; op = 3 }
-//     function nn2() {
-//         resultCalc.innerHTML += numBtn.textContent
-//         let n2 = resultCalc.innerHTML
-//         return n2
-//     }
-//     numBtn.onclick = nn2
-//     calcEqualBtn.onclick = function () {
-//         resultCalc.innerHTML = parseInt(nn2 ())
-//         resultCalc.style.color = "green"
-//     }
-// })
 
 /******************************************************************** app18  ****************************/
 let btnON = document.querySelector("#btnON")
@@ -755,12 +738,12 @@ increaseQuantityBtn.forEach(function (inpIncrease, i) {
         productBuyBtn[i].innerHTML = "Buy"
         totalPriceQuntity[i] += parseInt(productPrice[i].getAttribute("price"))
         productTotalPrice[i].innerHTML = totalPriceQuntity[i] + " $"
-          // Display Buy btn 
+        // Display Buy btn 
         if (inpQuantity[i].value != 0) {
             productBuyBtn[i].style.display = "block"
             productTotalPrice[i].style.paddingRight = "80px"
         }
-      // change the buy btn after click event
+        // change the buy btn after click event
         productBuyBtn[i].addEventListener("click", () => {
             productBuyBtn[i].innerHTML = '<i class="fas fa-check"></i>'
             productBuyBtn[i].style.color = "#fff"
@@ -793,3 +776,43 @@ decreaseQuantityBtn.forEach(function (inpDecrease, i) {
         }
     })
 })
+/******************************************************************** app21  ****************************/
+var inpTxt = document.querySelector("#inpTxt")
+    , addItemBtn = document.querySelector("#addItem")
+    , listItem = document.querySelector("#listItem")
+
+addItemBtn.addEventListener("click", () => {
+    if (inpTxt.value != 0) {
+        // create new Item
+        var createItem = document.createElement("li")
+        createItem.innerHTML = inpTxt.value
+        listItem.appendChild(createItem)
+        // craete close btn to item
+        var createCloseBtn = document.createElement("span")
+        createCloseBtn.innerHTML = "X"
+        createCloseBtn.setAttribute("id", "closeItemBtn")
+        createItem.appendChild(createCloseBtn)
+    }
+    // remove the value from the input text after create
+    inpTxt.value = ""
+    // close the item
+    var closeItemBtn = document.querySelectorAll("#closeItemBtn")
+    closeItemBtn.forEach(function (closeItem) {
+        closeItem.addEventListener("click", () => {
+            closeItem.parentElement.style.opacity = "0"
+            setTimeout(() => {
+                closeItem.parentElement.style.display = "none"
+            }, 400);
+        })
+    })
+})
+// close the defult item 
+var closeItemBtn = document.querySelectorAll("#closeItemBtn")
+for (let i = 0; i < closeItemBtn.length; i++) {
+    closeItemBtn[i].addEventListener("click", () => {
+        closeItemBtn[i].parentElement.style.opacity = "0"
+        setTimeout(() => {
+            closeItemBtn[i].parentElement.style.display = "none"
+        }, 400);
+    })
+}

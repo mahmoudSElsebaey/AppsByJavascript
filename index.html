@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
-
+    <link rel="icon" href="images/train-3.png">
 </head>
 
 <body>
@@ -610,39 +610,38 @@
             <div class="calculator-box">
                 <table class="calc-table">
                     <tr>
-                        <th class="result-calc" colspan="4">
-                            <span class="showNum1"></span>
-                            <span class="showOprator"></span>
-                            <span class="showNum2"></span>
-                            مش شغاله لاسباب فنية
+                        <th colspan="4">
+                            <span class="display-opreation"></span>
+                            <span class="show-result-calc"></span>
                         </th>
                     </tr>
                     <tr>
                         <td id="calcNum">7</td>
                         <td id="calcNum">8</td>
                         <td id="calcNum">9</td>
-                        <td id="calcDiv" style="background-color: rgb(48, 47, 47);">/</td>
+                        <td id="calcNum">/</td>
                     </tr>
                     <tr>
                         <td id="calcNum">4</td>
                         <td id="calcNum">5</td>
                         <td id="calcNum">6</td>
-                        <td id="calcMul" style="background-color: rgb(48, 47, 47);">*</td>
+                        <td id="calcNum">*</td>
                     </tr>
                     <tr>
                         <td id="calcNum">1</td>
                         <td id="calcNum">2</td>
                         <td id="calcNum">3</td>
-                        <td id="calcSub" style="background-color: rgb(48, 47, 47);">-</td>
+                        <td id="calcNum">-</td>
                     </tr>
                     <tr>
                         <td id="calcNum">0</td>
                         <td id="calcNum" colspan="2" style="font-size: 20px; font-weight: 900;"><sup>.</sup></td>
-                        <td id="calcSum" rowspan="2" style="background-color: rgb(48, 47, 47);">+</td>
+                        <td id="calcNum">+</td>
                     </tr>
                     <tr>
-                        <td id="calcDel" colspan="2" style="background-color: red; color:#fff;">del</td>
-                        <td id="calcEqual" style="background-color: green; color:#fff;">=</td>
+                        <td id="calcDel" style="background-color: red; color:#fff;">DEL</td>
+                        <td id="calcClear" style="background-color: red; color:#fff;">AC</td>
+                        <td id="calcEqual" colspan="2" style="background-color: green; color:#fff;">=</td>
                     </tr>
                 </table>
             </div>
@@ -905,10 +904,10 @@
                 </div>
             </div>
             <!-- El fatora -->
-            <div class="box-fatora">
+            <!-- <div class="box-fatora">
                 <button id="AddToCartAllProduct">Add to cart</button>
                 <h2 id="showTotalPrice"></h2>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--------------------------------------------------- App21  -------------------------------------------------->
@@ -916,8 +915,20 @@
     <h1 style="text-align: center;">App 21</h1>
     <hr>
     <section class="sec-21">
-        <h2 class="title-app">SOON</h2>
-        <div class="sec21-content"></div>
+        <h2 class="title-app">adding / delete items</h2>
+        <div class="sec21-content">
+            <div class="box-adding-items">
+                <input type="text" id="inpTxt" placeholder="Enter new item" required>
+                <button id="addItem"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="items-container">
+                <ul id="listItem">
+                    <li>OPPO<span id="closeItemBtn">X</span></li>
+                    <li>IPhone<span id="closeItemBtn">X</span></li>
+                    <li>HUAWEI<span id="closeItemBtn">X</span></li>
+                </ul>
+            </div>
+        </div>
     </section>
     <!--------------------------------------------------- App22  -------------------------------------------------->
     <hr>
@@ -933,7 +944,9 @@
     <hr>
     <section class="sec-23">
         <h2 class="title-app">SOON</h2>
-        <div class="sec23-content"></div>
+        <div class="sec23-content">
+
+        </div>
     </section>
 
     <script src="js/script.js"></script>
