@@ -875,8 +875,43 @@ socialBoxIcon.forEach(function (socialIcon) {
         socialOverlay.style.transitionDelay = null
     })
 })
-// mouse leave the box 
-socialBox.addEventListener("mouseleave", () => {
+// // mouse leave the box 
+// socialBox.addEventListener("mouseleave", () => {
+   
+// })
+
+setInterval(() => {
     socialOverlay.style = null
     socialOverlay.style.transitionDelay = "1s"
+}, 3000);
+
+/******************************************************************** app24 ****************************/
+/******************************************************************** app25 ****************************/
+let allDivs = document.querySelectorAll(".box-flex div")
+let changeDiv = document.getElementById("changeDiv")
+
+allDivs.forEach(function (divItem) {
+    changeDiv.addEventListener("click", () => {
+        divItem.style.order = Math.floor(Math.random() * 10)
+    })
+})
+/******************************************************************** app26 ****************************/
+let popupOverlay = document.querySelectorAll(".popup-overlay")
+let AllPopupImg = document.querySelectorAll(".popup-img img")
+    , zoomImg = document.querySelector(".zoom-img-overlay img")
+    , btnCloseZoomImg = document.querySelector("#btnCloseZoomImg")
+// console.log(zoomImg.parentElement)
+var getSrcImg
+popupOverlay.forEach(function (popItem, i) {
+    popItem.addEventListener("click", () => {
+        getSrcImg = AllPopupImg[i].getAttribute("src")
+        // console.log(getSrcImg)
+        zoomImg.setAttribute("src", getSrcImg)
+        // console.log(zoomImg)
+        zoomImg.parentElement.style.width = "100%"
+        zoomImg.parentElement.style.height = "100%"
+    })
+    btnCloseZoomImg.addEventListener("click", () => {
+        zoomImg.parentElement.style = null
+    })
 })
