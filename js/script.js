@@ -266,7 +266,7 @@ function returnMenuIcon() {
     menuBtn.style = null
 }
 menuBtn.addEventListener("click", () => {
-    if (menuBtn.style.backgroundColor == "red"){ returnMenuIcon() } //return icon
+    if (menuBtn.style.backgroundColor == "red") { returnMenuIcon() } //return icon
     else { changeMenuIcon() }//change icon 
 })
 
@@ -858,4 +858,25 @@ dotsBtn.forEach(function (dotItem, i) {
     dotItem.addEventListener("click", () => {
         slideShow(slideNum = i)
     })
+})
+/******************************************************************** app23  ****************************/
+let socialBox = document.querySelector(".social-box")
+let socialBoxIcon = document.querySelectorAll(".social-box .fab")
+let socialOverlay = document.querySelector(".social-overlay")
+// click
+socialOverlay.addEventListener("click", () => {
+    socialOverlay.style.left = "-102%"
+    socialOverlay.style.transitionDelay = null
+})
+// mouse enter any icon
+socialBoxIcon.forEach(function (socialIcon) {
+    socialIcon.addEventListener("mouseenter", () => {
+        socialOverlay.style.left = "-102%"
+        socialOverlay.style.transitionDelay = null
+    })
+})
+// mouse leave the box 
+socialBox.addEventListener("mouseleave", () => {
+    socialOverlay.style = null
+    socialOverlay.style.transitionDelay = "1s"
 })
