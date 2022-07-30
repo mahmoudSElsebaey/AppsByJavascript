@@ -877,7 +877,7 @@ socialBoxIcon.forEach(function (socialIcon) {
 })
 // // mouse leave the box 
 // socialBox.addEventListener("mouseleave", () => {
-   
+
 // })
 
 setInterval(() => {
@@ -913,5 +913,28 @@ popupOverlay.forEach(function (popItem, i) {
     })
     btnCloseZoomImg.addEventListener("click", () => {
         zoomImg.parentElement.style = null
+    })
+})
+
+/******************************************************************** app27 ****************************/
+let navItemBtn = document.querySelectorAll("#navDrop")
+    , navDrop = document.querySelectorAll("#drop")
+    , dropIcon = document.querySelectorAll("#navDrop i")
+
+navItemBtn.forEach(function (item, i) {
+    item.addEventListener("click", () => {
+        if ( navDrop[i].style.display != "block") {
+            // if (dropIcon[i].className == "fas fa-chevron-down") {
+            // dropIcon[i].className = dropIcon[i].className.replace("fa-chevron-down", "fa-chevron-up");
+            dropIcon[i].style.transform = "rotate(180deg)"
+            navDrop[i].style.display = "block"
+            navDrop[i].style.opacity = "1"
+            item.style.backgroundColor = "#bbbbbb8d"
+        } else {
+            // dropIcon[i].className = dropIcon[i].className.replace("fa-chevron-up", "fa-chevron-down");
+            dropIcon[i].style= null
+            navDrop[i].style = null
+            item.style = null
+        }
     })
 })
