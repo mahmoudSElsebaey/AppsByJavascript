@@ -1,127 +1,127 @@
 
-// // images show by images icons
-// var showImages = document.querySelectorAll(".imgItems .groupImgShow img")
-//     , imgIcon = document.querySelectorAll(".imgItems .groupImgIcon img")
-//     , imgItems = document.querySelectorAll(".imgItems")
+// images show by images icons
+var showImages = document.querySelectorAll(".imgItems .groupImgShow img")
+    , imgIcon = document.querySelectorAll(".imgItems .groupImgIcon img")
+    , imgItems = document.querySelectorAll(".imgItems")
 
-// imgIcon.forEach(function (imgIconItem, i) {
-//     // active images
-//     showImages[0].style.visibility = "visible";   // active
-//     showImages[3].style.visibility = "visible";   // active
-//     showImages[6].style.visibility = "visible";   // active
-//     function imgShow() {
-//         if (i == 0) {
-//             showImages[0].style.visibility = "visible";
-//             showImages[1].style.visibility = "hidden";
-//             showImages[2].style.visibility = "hidden";
-//         } else if (i == 1) {
-//             showImages[0].style.visibility = "hidden";
-//             showImages[1].style.visibility = "visible";
-//             showImages[2].style.visibility = "hidden";
-//         } else if (i == 2) {
-//             showImages[0].style.visibility = "hidden";
-//             showImages[1].style.visibility = "hidden";
-//             showImages[2].style.visibility = "visible";
-//         } else if (i == 3) {
-//             showImages[3].style.visibility = "visible";
-//             showImages[4].style.visibility = "hidden";
-//             showImages[5].style.visibility = "hidden";
-//         } else if (i == 4) {
-//             showImages[3].style.visibility = "hidden";
-//             showImages[4].style.visibility = "visible";
-//             showImages[5].style.visibility = "hidden";
-//         } else if (i == 5) {
-//             showImages[3].style.visibility = "hidden";
-//             showImages[4].style.visibility = "hidden";
-//             showImages[5].style.visibility = "visible";
-//         } else if (i == 6) {
-//             showImages[6].style.visibility = "visible";
-//             showImages[7].style.visibility = "hidden";
-//             showImages[8].style.visibility = "hidden";
-//         } else if (i == 7) {
-//             showImages[6].style.visibility = "hidden";
-//             showImages[7].style.visibility = "visible";
-//             showImages[8].style.visibility = "hidden";
-//         } else {
-//             showImages[6].style.visibility = "hidden";
-//             showImages[7].style.visibility = "hidden";
-//             showImages[8].style.visibility = "visible";
-//         }
-//     }
-//     // imgIconItem.onmouseenter = imgShow   //hover 
-//     imgIconItem.onclick = imgShow   //Click 
-// })
+imgIcon.forEach(function (imgIconItem, i) {
+    // active images
+    showImages[0].style.visibility = "visible";   // active
+    showImages[3].style.visibility = "visible";   // active
+    showImages[6].style.visibility = "visible";   // active
+    function imgShow() {
+        if (i == 0) {
+            showImages[0].style.visibility = "visible";
+            showImages[1].style.visibility = "hidden";
+            showImages[2].style.visibility = "hidden";
+        } else if (i == 1) {
+            showImages[0].style.visibility = "hidden";
+            showImages[1].style.visibility = "visible";
+            showImages[2].style.visibility = "hidden";
+        } else if (i == 2) {
+            showImages[0].style.visibility = "hidden";
+            showImages[1].style.visibility = "hidden";
+            showImages[2].style.visibility = "visible";
+        } else if (i == 3) {
+            showImages[3].style.visibility = "visible";
+            showImages[4].style.visibility = "hidden";
+            showImages[5].style.visibility = "hidden";
+        } else if (i == 4) {
+            showImages[3].style.visibility = "hidden";
+            showImages[4].style.visibility = "visible";
+            showImages[5].style.visibility = "hidden";
+        } else if (i == 5) {
+            showImages[3].style.visibility = "hidden";
+            showImages[4].style.visibility = "hidden";
+            showImages[5].style.visibility = "visible";
+        } else if (i == 6) {
+            showImages[6].style.visibility = "visible";
+            showImages[7].style.visibility = "hidden";
+            showImages[8].style.visibility = "hidden";
+        } else if (i == 7) {
+            showImages[6].style.visibility = "hidden";
+            showImages[7].style.visibility = "visible";
+            showImages[8].style.visibility = "hidden";
+        } else {
+            showImages[6].style.visibility = "hidden";
+            showImages[7].style.visibility = "hidden";
+            showImages[8].style.visibility = "visible";
+        }
+    }
+    // imgIconItem.onmouseenter = imgShow   //hover 
+    imgIconItem.onclick = imgShow   //Click 
+})
 
-// // heartIconBtn  => effects
-// var heartBtn = document.querySelectorAll(".heart-icon")
-// heartBtn.forEach(function (hB) {
-//     hB.onclick = function () {
-//         hB.style.color = "#fff"
-//         hB.style.transition = ".5s"
-//         hB.style.backgroundColor = " #f68b1e";
-//     }
-// })
+// heartIconBtn  => effects
+var heartBtn = document.querySelectorAll(".heart-icon")
+heartBtn.forEach(function (hB) {
+    hB.onclick = function () {
+        hB.style.color = "#fff"
+        hB.style.transition = ".5s"
+        hB.style.backgroundColor = " #f68b1e";
+    }
+})
 
-// // addToCartBtn  => effects
-// var addToCart = document.querySelectorAll("#addToCart")
-//     , cartIcon = document.querySelectorAll("#cartIcon")
-//     , productsChoosed = document.querySelector(".products-choosed")
-//     , addToCartBtn = document.querySelector(".addToCartBtn")
-//     , numOfProduct = document.querySelector(".numbersOfProducts")
-//     , totalPriceContent = document.querySelector(".totalPrice")
-//     , totalPrice = 0
-//     , numProduct = 1;
+// addToCartBtn  => effects
+var addToCart = document.querySelectorAll("#addToCart")
+    , cartIcon = document.querySelectorAll("#cartIcon")
+    , productsChoosed = document.querySelector(".products-choosed")
+    , addToCartBtn = document.querySelector(".addToCartBtn")
+    , numOfProduct = document.querySelector(".numbersOfProducts")
+    , totalPriceContent = document.querySelector(".totalPrice")
+    , totalPrice = 0
+    , numProduct = 1;
 
-// addToCart.forEach(function (addCartBtn, i) {
-//     addCartBtn.onclick = function () {
-//         addCartBtn.style.color = "#fff"
-//         addCartBtn.style.backgroundColor = "green"
-//         addCartBtn.style.visibility = "visible"
-//         addCartBtn.style.border = "none"
-//         cartIcon[i].innerHTML = '<i class="fas fa-check"></i>'
-//         btnFront[i].style.visibility = "visible"
+addToCart.forEach(function (addCartBtn, i) {
+    addCartBtn.onclick = function () {
+        addCartBtn.style.color = "#fff"
+        addCartBtn.style.backgroundColor = "green"
+        addCartBtn.style.visibility = "visible"
+        addCartBtn.style.border = "none"
+        cartIcon[i].innerHTML = '<i class="fas fa-check"></i>'
+        btnFront[i].style.visibility = "visible"
 
-//         totalPrice += parseInt(addCartBtn.getAttribute("price"))
-//         productsChoosed.innerHTML += numProduct++ + ":" + addCartBtn.getAttribute("productName") + "&nbsp;&nbsp;&nbsp;"
-//         if (productsChoosed.innerHTML != "") {
-//             addToCartBtn.style.display = "block"
-//         }
-//     }
-// })
+        totalPrice += parseInt(addCartBtn.getAttribute("price"))
+        productsChoosed.innerHTML += numProduct++ + ":" + addCartBtn.getAttribute("productName") + "&nbsp;&nbsp;&nbsp;"
+        if (productsChoosed.innerHTML != "") {
+            addToCartBtn.style.display = "block"
+        }
+    }
+})
 
-// addToCartBtn.onclick = function () {
-//     numOfProduct.textContent = "Number of products that you choosed are " + (numProduct - 1) + " products"
-//     totalPriceContent.textContent = " Total Price is " + totalPrice + " EGP"
-// }
+addToCartBtn.onclick = function () {
+    numOfProduct.textContent = "Number of products that you choosed are " + (numProduct - 1) + " products"
+    totalPriceContent.textContent = " Total Price is " + totalPrice + " EGP"
+}
 
-// // moving between front & back
-// var parentCart = document.querySelectorAll(".parent")
-//     , btnFront = document.querySelectorAll("#goToFront")
-//     , btnBack = document.querySelectorAll("#goToBack")
+// moving between front & back
+var parentCart = document.querySelectorAll(".parent")
+    , btnFront = document.querySelectorAll("#goToFront")
+    , btnBack = document.querySelectorAll("#goToBack")
 
-// btnBack.forEach(function (bB, i) {
-//     bB.onclick = function () {
-//         parentCart[i].style.transform = "rotateY(180deg)"
-//         btnFront[i].onclick = function () {
-//             parentCart[i].style.transform = "rotateY(360deg)"
-//             cartIcon[i].innerHTML = '<i class="fas fa-cart-plus"></i>'
-//             // addToCart[i].style.backgroundColor = null
-//             // addToCart[i].style.color = null
-//             // addToCart[i].style.visibility = null
-//             // addToCart[i].style.border = null
-//             addToCart[i].style = null                    // ===> other way 
-//             btnFront[i].style.visibility = null
-//             heartBtn[i].style.color = null
-//             heartBtn[i].style.backgroundColor = null
-//             addToCartBtn.style.display = "none"
-//             productsChoosed.innerHTML = ""
-//             numOfProduct.textContent = ""
-//             totalPriceContent.textContent = ""
-//             numProduct = 1;
-//             totalPrice = 0;
-//         }
-//     }
-// });
+btnBack.forEach(function (bB, i) {
+    bB.onclick = function () {
+        parentCart[i].style.transform = "rotateY(180deg)"
+        btnFront[i].onclick = function () {
+            parentCart[i].style.transform = "rotateY(360deg)"
+            cartIcon[i].innerHTML = '<i class="fas fa-cart-plus"></i>'
+            // addToCart[i].style.backgroundColor = null
+            // addToCart[i].style.color = null
+            // addToCart[i].style.visibility = null
+            // addToCart[i].style.border = null
+            addToCart[i].style = null                    // ===> other way 
+            btnFront[i].style.visibility = null
+            heartBtn[i].style.color = null
+            heartBtn[i].style.backgroundColor = null
+            addToCartBtn.style.display = "none"
+            productsChoosed.innerHTML = ""
+            numOfProduct.textContent = ""
+            totalPriceContent.textContent = ""
+            numProduct = 1;
+            totalPrice = 0;
+        }
+    }
+});
 
 ////////////////////////////////////////////////////////// App 2 ///////////////////////////
 var btnToDecrease = document.querySelector(".btnToDecrease")
