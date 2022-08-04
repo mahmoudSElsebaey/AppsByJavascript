@@ -2142,3 +2142,206 @@ input[type=number] {
 .sec-27 nav .nav-item #drop li:hover {
     background-color: #bbbbbb8d;
 }
+
+/***************************************************************** app28  ****************************/
+.sec-28 {
+    width: 100%;
+    margin: 50px auto;
+}
+
+.sec-28 .sec28-content {
+    width: 80%;
+    /* height: 400px; */
+    position: relative;
+    /* overflow: hidden; */
+    /* border: 1px solid #f7035d; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-28 .sec28-content .sec28-products,
+.sec-28 .sec28-content .sec28-cart {
+    width: 40%;
+    /* border: 1px solid red; */
+    padding: 15px 10px;
+}
+
+.sec-28 .sec28-content .sec28-products {
+    width: 58%;
+}
+
+.sec-28 .sec28-content h3 {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.2);
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 15px;
+    font-family: cursive;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.sec28-products-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec28-products-content .product-parent {
+    width: 32%;
+    height: 300px;
+    border: 2px dotted #28a745;
+    padding: 10px;
+    margin-top: 17px;
+    border-radius: 10px;
+}
+
+.sec28-products-content .product-parent .product-img {
+    width: 90%;
+    height: 60%;
+    display: block;
+    margin: auto;
+}
+
+.sec28-products-content .product-parent p {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: #17a2b8;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sec28-products-content .product-parent h4 {
+    font-family: cursive;
+    color: #28a745;
+    font-size: 18px;
+    font-style: italic;
+    padding: 15px;
+}
+
+.sec28-products-content .product-parent button {
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+    padding: 5px 20px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+.sec28-products-content .product-parent button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.sec-28 .sec28-cart-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-28 .sec28-cart-content .cart-product-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px dotted #28a745;
+    border-radius: 10px;
+    height: 80px;
+    line-height: 80px;
+    margin-top: 10px;
+}
+
+.sec-28 .cart-product-item .cart-product-img {
+    width: 80px;
+}
+
+.sec-28 .cart-product-item .cart-info {
+    width: 45%;
+    /* border: 1px solid red; */
+    font-weight: bold;
+    display: flex;
+}
+
+.sec-28 .cart-product-item .cart-product-name {
+    text-transform: capitalize;
+    color: #17a2b8;
+    padding-right: 15px;
+
+}
+.sec-28 .cart-product-item .cart-info p{
+    font-style: italic;
+    font-family: cursive;
+    color: #28a745;
+}
+/* .sec-28 .cart-product-item .cart-porduct-price {} */
+    
+.sec-28 .cart-product-item .cart-buttons {
+    width: 28%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.sec-28 .cart-product-item .cart-buttons button {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+
+.sec-28 .cart-product-item .cart-buttons button:nth-child(1) {
+    background-color: #999;
+}
+
+.sec-28 .cart-product-item .cart-buttons button:nth-child(3) {
+    background-color: #17a2b8;
+}
+
+.sec-28 .cart-product-item .cart-buttons button:nth-child(4) {
+    background-color: red;
+}
+
+.sec-28 .cart-product-item .cart-buttons button:hover {
+    color: black;
+}
+
+.sec-28 .sec28-cart-content .cart-price-content{
+    display: none;
+}
+
+.sec-28 .sec28-cart-content .cart-total-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+    border: 2px dotted #28a745;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.sec-28 .sec28-cart-content .cart-total-price button {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+}
+
+.sec-28 .sec28-cart-content .cart-total-price button:nth-child(1) {
+    background-color: red;
+}
+
+.sec-28 .sec28-cart-content .cart-total-price button:nth-child(2) {
+    background-color: #333;
+}
