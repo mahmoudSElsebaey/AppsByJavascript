@@ -17,6 +17,8 @@ ul, ol {
     list-style: none;
 }
 
+
+/* ------------------------------ Titles of Apps -----------------------*/
 .num-app {
     display: flex;
     justify-content: space-between;
@@ -91,9 +93,20 @@ ul, ol {
     height: 100%;
 }
 
+/* ---------------------------------------------  Reveal website elements on scroll -------------------- */
+.reveal {
+    /* position: relative; */
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
 
+.reveal.secActive {
+    transform: translateY(0px);
+    opacity: 1;
+}
 
-/* --------------------------------------------------------------------------------- */
+/* -------------------------------------------------- App 1-------------------------------------------- */
 .sec1 {
     width: 80%;
     /* border: 1px solid black; */
@@ -2273,13 +2286,15 @@ input[type=number] {
     padding-right: 15px;
 
 }
-.sec-28 .cart-product-item .cart-info p{
+
+.sec-28 .cart-product-item .cart-info p {
     font-style: italic;
     font-family: cursive;
     color: #28a745;
 }
+
 /* .sec-28 .cart-product-item .cart-porduct-price {} */
-    
+
 .sec-28 .cart-product-item .cart-buttons {
     width: 28%;
     display: flex;
@@ -2313,7 +2328,7 @@ input[type=number] {
     color: black;
 }
 
-.sec-28 .sec28-cart-content .cart-price-content{
+.sec-28 .sec28-cart-content .cart-price-content {
     display: none;
 }
 
